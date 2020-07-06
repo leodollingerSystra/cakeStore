@@ -69,12 +69,13 @@ CREATE TABLE IF NOT EXISTS `products` (
 
 DROP TABLE IF EXISTS `shopping`;
 CREATE TABLE IF NOT EXISTS `shopping` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `product_id` int(11) NOT NULL,
   `quantity` int(11) NOT NULL DEFAULT '1',
   `created` datetime NOT NULL,
-  `modified` datetime DEFAULT NULL
+  `modified` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
